@@ -1,0 +1,8 @@
+@use "../../utilities/utilities" as *;
+
+.navbar{
+        padding-block: pix-rem(16,em);
+        padding-inline: pix-rem(16,rem);
+        background-color: map-get($colors, "dark-primary" );
+        color: white;
+}

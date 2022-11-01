@@ -1,0 +1,5 @@
+// -----------Convert Pixel To Rem ------------------------//
+@function pix-rem($pixel, $suffix:rem){
+        $calculated : calc($pixel/16);
+        @return #{$calculated}#{$suffix};
+}
