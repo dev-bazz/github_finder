@@ -1,8 +1,45 @@
 @use "../../utilities/utilities" as *;
 
-.navbar{
-        padding-block: pix-rem(16,em);
-        padding-inline: pix-rem(16,rem);
-        background-color: map-get($colors, "dark-primary" );
+.navbar {
+        padding-block: pix-rem(16, em);
+        padding-inline: pix-rem(16, rem);
+        background-color: map-get($colors, "dark-primary");
         color: white;
+}
+
+.nav__link {
+        text-decoration: none;
+        color: white;
+
+}
+
+.nav-l{
+        background-color:  darken(map-get($colors, "dark-primary"), $amount: 30);
+        padding-inline: pix-rem(24);
+        padding-block: pix-rem(8);
+        border-radius: pix-rem(4);
+        &:hover{
+                transition: background-color .4s ease-in-out;
+                background-color: lighten(map-get($colors, "dark-primary"), $amount: 30);
+        }
+}
+
+
+
+
+@mixin navItems {
+        display: flex;
+        align-items: center;
+        gap: pix-rem(18,em);
+}
+.nav__left, .nav__right {
+        @include navItems
+}
+.nav__right{
+        gap: pix-rem(28,em);
+}
+
+.nav-content{
+        display: flex;
+        justify-content: space-between;
 }

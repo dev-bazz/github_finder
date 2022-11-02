@@ -1,4 +1,10 @@
+@import "../../utilities/utilities";
+
         .container{
                 width: min( pix-rem(map-get($container, "desktop")),100%);
                 margin-inline: auto;
+        }
+
+        .git-icon{
+                font-size: pix-rem(20);
         }

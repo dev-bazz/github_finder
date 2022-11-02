@@ -1,3 +1,21 @@
 @use "./reset";
-@use  "./utilities/utilities";
+@use "./utilities/utilities" as *;
 @use "./component/components";
+@use "./media";
+
+body {
+        font-family: "Roboto", sans-serif;
+}
+.btw{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        background-color: map-get($colors, "light-primary" );
+        color: white;
+}
+
+main{
+        width: min(100%, pix-rem(map-get($container, "desktop")));
+        padding-inline: pix-rem(16);
+}
